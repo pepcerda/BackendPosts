@@ -13,4 +13,6 @@ router.delete('/api/posts/:id', auth.checkAuth, posts.delete);
 router.post('/api/users', users.create); 
 router.post('/api/login', users.login); 
 
+router.get('/api/:id/validate', users.validate); 
+
 module.exports = router; 
