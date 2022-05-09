@@ -15,7 +15,7 @@ let transporter = nodemailer.createTransport({
         to: user.email, 
         subject: 'Validar usuario', 
         html: `Pulse en el siguiente enlace para validar su usuario <br> 
-        <a href="http://localhost:8000/api/${user.id}/validate">Validar email</a>`
+        <a href="${process.env.DOMINIO}/api/${user.id}/validate">Validar email</a>`
     })
     .then(() => console.log("Email sent"))
     .catch((err) => console.error("Error sending email: ", err))
