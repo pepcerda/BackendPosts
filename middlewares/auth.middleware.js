@@ -1,6 +1,7 @@
 const { decode } = require('jsonwebtoken');
 const jwt = require('jsonwebtoken'); 
 const User = require('../models/user.model');
+require('dotenv').config();
 
 module.exports.checkAuth = async (req, res, next) => {
     const authHeader = req.headers.authorization; 
