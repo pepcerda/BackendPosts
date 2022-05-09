@@ -1,7 +1,5 @@
 const mongoose = require('mongoose');
 
-require('mongoose'); 
-
 const schema = new mongoose.Schema({
     title: {
         type: String, 
@@ -14,7 +12,7 @@ const schema = new mongoose.Schema({
         minlength: 5
     }, 
     author: {
-        type: String, 
+        type: String,
         required: true
     }
     }, { 
